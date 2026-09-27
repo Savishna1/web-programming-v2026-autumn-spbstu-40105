@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <title>Movies</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <h1>Фильмы</h1>
 
-  <input type="text" id="title-input" placeholder="Название" />
-  <input type="text" id="director-input" placeholder="Режиссёр" />
-  <button id="add-movie-btn">Добавить фильм</button>
+  <form data-testid="entity-form">
+    <input type="text" name="title" placeholder="Название" required />
+    <input type="text" name="director" placeholder="Режиссёр" required />
+    <button type="submit">Добавить фильм</button>
+  </form>
 
-  <div id="movie-list"></div>
+  <div data-testid="entity-list"></div>
 
-  <script src="movie.js"></script>
-  <script src="app.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>

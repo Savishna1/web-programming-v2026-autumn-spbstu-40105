@@ -1,4 +1,4 @@
-class Movie {
+export class Movie {
   constructor(title, director, actors = []) {
     this.title = title;
     this.director = director;
@@ -21,7 +21,7 @@ class Movie {
   }
 }
 
-function groupByDirector(movies) {
+export function groupByDirector(movies) {
   const result = {};
   for (const movie of movies) {
     if (!result[movie.director]) {
@@ -32,7 +32,7 @@ function groupByDirector(movies) {
   return result;
 }
 
-function getUniqueActors(movies) {
+export function getUniqueActors(movies) {
   const set = new Set();
   for (const movie of movies) {
     for (const actor of movie.actors) {
@@ -42,7 +42,7 @@ function getUniqueActors(movies) {
   return [...set];
 }
 
-function groupByActorCount(movies) {
+export function groupByActorCount(movies) {
   const result = {};
   for (const movie of movies) {
     const count = movie.castSize;
@@ -54,21 +54,10 @@ function groupByActorCount(movies) {
   return result;
 }
 
-function getMoviesByActor(movies, actorName) {
+export function getMoviesByActor(movies, actorName) {
   return movies.filter((movie) => movie.actors.includes(actorName));
 }
 
-function getAllTitles(movies) {
+export function getAllTitles(movies) {
   return movies.map((movie) => movie.title);
-}
-
-if (typeof module !== 'undefined') {
-  module.exports = {
-    Movie,
-    groupByDirector,
-    getUniqueActors,
-    groupByActorCount,
-    getMoviesByActor,
-    getAllTitles,
-  };
 }
