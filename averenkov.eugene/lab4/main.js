@@ -27,10 +27,11 @@ function createMovieCard(movie) {
   const card = document.createElement('article');
   card.dataset.testid = 'entity-card';
 
-  card.innerHTML =
-    '<h3>' + movie.title + '</h3>' +
-    '<p>Режиссёр: ' + movie.director + '</p>' +
-    '<p>Актёры: ' + movie.actors.join(', ') + '</p>';
+  card.innerHTML = `
+    <h3>${movie.title}</h3>
+    <p>Режиссёр: ${movie.director}</p>
+    <p>Актёры: ${movie.actors.join(', ')}</p>
+  `;
 
   const removeMovieBtn = document.createElement('button');
   removeMovieBtn.type = 'button';

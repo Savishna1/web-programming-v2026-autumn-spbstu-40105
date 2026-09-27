@@ -21,7 +21,7 @@ export class Movie {
   }
 }
 
-export function groupByDirector(movies) {
+export function groupMoviesByDirector(movies) {
   const result = {};
   for (const movie of movies) {
     if (!result[movie.director]) {
