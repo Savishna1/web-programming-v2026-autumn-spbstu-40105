@@ -42,7 +42,7 @@ export function getUniqueActors(movies) {
   return [...set];
 }
 
-export function groupByActorCount(movies) {
+export function groupMoviesByCastSize(movies) {
   const result = {};
   for (const movie of movies) {
     const count = movie.castSize;
