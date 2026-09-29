@@ -1,3 +1,5 @@
+console.log('MODEL LOADED', Date.now())
+
 export class Movie {
   constructor(title, director, actors = []) {
     this.title = title;
