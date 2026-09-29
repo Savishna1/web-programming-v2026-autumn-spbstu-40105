@@ -57,7 +57,7 @@ export default function Slider() {
       <p className="caption">{book.caption}</p>
 
       <div className="controls">
-        <button data-testid="slide-prev" onClick={() => show(current - 1)}>
+        <button data-testid="slide-previous" onClick={() => show(current - 1)}>
           Назад
         </button>
         <span className="counter" data-testid="slide-indicator">
