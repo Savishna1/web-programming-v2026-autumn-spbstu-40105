@@ -72,7 +72,7 @@ export default function Slider() {
         {books.map((_, i) => (
           <span
             key={i}
-            data-testid="slide-dot"
+            data-testid="slide-page"
             className={i === current ? 'dot active' : 'dot'}
             onClick={() => show(i)}
           />
