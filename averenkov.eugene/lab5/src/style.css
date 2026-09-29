@@ -49,7 +49,7 @@ body {
   cursor: pointer;
 }
 
-#counter {
+.counter {
   margin: 0 15px;
 }
 

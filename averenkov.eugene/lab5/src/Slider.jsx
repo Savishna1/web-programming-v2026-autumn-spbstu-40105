@@ -1,6 +1,5 @@
-import { useState } from 'react';
+import {useState} from 'react';
 
-// Данные книг вынесены отдельно, чтобы JSX был короче
 const books = [
   {
     img: '/1.svg',
@@ -29,13 +28,15 @@ const books = [
 ];
 
 export default function Slider() {
-  // useState хранит номер текущего слайда (с нуля)
   const [current, setCurrent] = useState(0);
 
-  // Переключение на слайд n с зацикливанием
   function show(n) {
-    if (n >= books.length) n = 0;
-    if (n < 0) n = books.length - 1;
+    if (n >= books.length) {
+      n = 0;
+    }
+    if (n < 0) {
+      n = books.length - 1;
+    }
     setCurrent(n);
   }
 
@@ -43,7 +44,6 @@ export default function Slider() {
 
   return (
     <div className="slider">
-      {/* Карточка текущей книги */}
       <div className="card">
         <img src={book.img} alt={book.title} />
         <div className="info">
@@ -54,17 +54,16 @@ export default function Slider() {
         </div>
       </div>
 
-      {/* Подпись к слайду */}
       <p className="caption">{book.caption}</p>
 
-      {/* Кнопки и счётчик */}
       <div className="controls">
         <button onClick={() => show(current - 1)}>Назад</button>
-        <span id="counter">{current + 1} / {books.length}</span>
+        <span className="counter" data-testid="slide-indicator">
+          {current + 1} / {books.length}
+        </span>
         <button onClick={() => show(current + 1)}>Далее</button>
       </div>
 
-      {/* Пагинация (точки) */}
       <div className="dots">
         {books.map((_, i) => (
           <span
