@@ -44,7 +44,7 @@ export default function Slider() {
 
   return (
     <div className="slider">
-      <div className="card">
+      <div className="card" data-testid="book-slide">
         <img src={book.img} alt={book.title} />
         <div className="info">
           <h2>{book.title}</h2>
@@ -57,17 +57,22 @@ export default function Slider() {
       <p className="caption">{book.caption}</p>
 
       <div className="controls">
-        <button onClick={() => show(current - 1)}>Назад</button>
+        <button data-testid="slide-prev" onClick={() => show(current - 1)}>
+          Назад
+        </button>
         <span className="counter" data-testid="slide-indicator">
           {current + 1} / {books.length}
         </span>
-        <button onClick={() => show(current + 1)}>Далее</button>
+        <button data-testid="slide-next" onClick={() => show(current + 1)}>
+          Далее
+        </button>
       </div>
 
       <div className="dots">
         {books.map((_, i) => (
           <span
             key={i}
+            data-testid="slide-dot"
             className={i === current ? 'dot active' : 'dot'}
             onClick={() => show(i)}
           />
