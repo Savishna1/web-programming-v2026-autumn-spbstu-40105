@@ -47,6 +47,7 @@ export function getUniqueActors(movies) {
 export function groupMoviesByCastSize(movies) {
   const result = {};
   for (const movie of movies) {
+    console.log('MODEL LOADED', Date.now())
     const count = Array.isArray(movie?.actors) ? movie.actors.length : 0;
     if (!result[count]) {
       result[count] = [];
