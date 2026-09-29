@@ -1,6 +1,7 @@
 body {
   background: #f2f2f2;
   text-align: center;
+  font-family: sans-serif;
 }
 
 .slider {
@@ -9,14 +10,6 @@ body {
   background: white;
   padding: 20px;
   border: 1px solid #ccc;
-}
-
-.slide {
-  display: none;
-}
-
-.slide.active {
-  display: block;
 }
 
 .card {

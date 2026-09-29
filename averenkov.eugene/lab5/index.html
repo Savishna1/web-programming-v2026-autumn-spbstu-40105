@@ -3,71 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Книжный магазин</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Книжный магазин</h1>
-
-  <div class="slider">
-
-    <!-- Слайд 1 -->
-    <div class="slide active">
-      <div class="card">
-        <img src="img/1.svg" alt="Чистый код">
-        <div class="info">
-          <h2>Чистый код</h2>
-          <p class="rating">Рейтинг: 4.8</p>
-          <p>Книга о том, как писать понятный и поддерживаемый код.</p>
-          <p class="price">1200 руб.</p>
-        </div>
-      </div>
-      <p class="caption">Хит продаж для программистов</p>
-    </div>
-
-    <!-- Слайд 2 -->
-    <div class="slide">
-      <div class="card">
-        <img src="img/2.svg" alt="Мастер и Маргарита">
-        <div class="info">
-          <h2>Мастер и Маргарита</h2>
-          <p class="rating">Рейтинг: 4.9</p>
-          <p>Роман Михаила Булгакова о визите дьявола в Москву 1930-х годов.</p>
-          <p class="price">650 руб.</p>
-        </div>
-      </div>
-      <p class="caption">Классика русской литературы</p>
-    </div>
-
-    <!-- Слайд 3 -->
-    <div class="slide">
-      <div class="card">
-        <img src="img/3.svg" alt="1984">
-        <div class="info">
-          <h2>1984</h2>
-          <p class="rating">Рейтинг: 4.7</p>
-          <p>Антиутопия Джорджа Оруэлла о тоталитарном обществе.</p>
-          <p class="price">500 руб.</p>
-        </div>
-      </div>
-      <p class="caption">Новинка недели</p>
-    </div>
-
-    <!-- Управление -->
-    <div class="controls">
-      <button id="prev">Назад</button>
-      <span id="counter">1 / 3</span>
-      <button id="next">Далее</button>
-    </div>
-
-    <!-- Пагинация -->
-    <div class="dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-
-  </div>
-
-  <script src="script.js"></script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
