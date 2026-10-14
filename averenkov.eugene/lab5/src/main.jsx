@@ -73,7 +73,7 @@ function App() {
       <h1>Книжный магазин</h1>
 
       <div className="slider">
-        <div className="card">
+        <div className="card" data-testid="book-slide">
           <img src={book.image} alt={book.title} />
           <div className="info">
             <h2>{book.title}</h2>
@@ -86,11 +86,15 @@ function App() {
         <p className="caption">{book.caption}</p>
 
         <div className="controls">
-          <button onClick={prev}>Назад</button>
+          <button onClick={prev} data-testid="slide-prev">
+            Назад
+          </button>
           <span className="counter" data-testid="slide-indicator">
             {current + 1}/{books.length}
           </span>
-          <button onClick={next}>Далее</button>
+          <button onClick={next} data-testid="slide-next">
+            Далее
+          </button>
         </div>
 
         <div className="dots">
