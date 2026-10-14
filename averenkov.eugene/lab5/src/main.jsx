@@ -101,6 +101,7 @@ function App() {
           {books.map((item, index) => (
             <span
               key={item.title}
+              data-testid="slide-page"
               className={index === current ? 'dot active' : 'dot'}
               onClick={() => setCurrent(index)}
             ></span>
