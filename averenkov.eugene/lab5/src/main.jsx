@@ -7,7 +7,6 @@ import imgCleanCode from '../assets/cleancode.jpg';
 import imgDune from '../assets/dune.jpg';
 import imgTanenbaum from '../assets/tanenbaum.jpg';
 
-// Данные слайдов: одна книга = один слайд
 const books = [
   {
     title: '1984',
@@ -45,11 +44,9 @@ const books = [
 ];
 
 function App() {
-  // Номер текущего слайда (счёт с нуля)
   const [current, setCurrent] = useState(0);
 
   function prev() {
-    // Если мы на первом слайде, переходим на последний
     if (current === 0) {
       setCurrent(books.length - 1);
     } else {
@@ -58,7 +55,6 @@ function App() {
   }
 
   function next() {
-    // Если мы на последнем слайде, переходим на первый
     if (current === books.length - 1) {
       setCurrent(0);
     } else {
