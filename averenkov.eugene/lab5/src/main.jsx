@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import { createRoot } from 'react-dom/client'
-import './styles.css'
+import {useState} from 'react';
+import {createRoot} from 'react-dom/client';
+import './styles.css';
 
-import img1984 from '../assets/1984.jpg'
-import imgCleanCode from '../assets/cleancode.jpg'
-import imgDune from '../assets/dune.jpg'
-import imgTanenbaum from '../assets/tanenbaum.jpg'
+import img1984 from '../assets/1984.jpg';
+import imgCleanCode from '../assets/cleancode.jpg';
+import imgDune from '../assets/dune.jpg';
+import imgTanenbaum from '../assets/tanenbaum.jpg';
 
 // Данные слайдов: одна книга = один слайд
 const books = [
@@ -29,7 +29,8 @@ const books = [
     title: 'Дюна',
     image: imgDune,
     rating: 4.9,
-    description: 'Научно-фантастический роман Фрэнка Герберта о планете Арракис.',
+    description:
+      'Научно-фантастический роман Фрэнка Герберта о планете Арракис.',
     price: 800,
     caption: 'Классика научной фантастики',
   },
@@ -41,31 +42,31 @@ const books = [
     price: 2500,
     caption: 'Выбор студентов',
   },
-]
+];
 
 function App() {
   // Номер текущего слайда (счёт с нуля)
-  const [current, setCurrent] = useState(0)
+  const [current, setCurrent] = useState(0);
 
   function prev() {
     // Если мы на первом слайде, переходим на последний
     if (current === 0) {
-      setCurrent(books.length - 1)
+      setCurrent(books.length - 1);
     } else {
-      setCurrent(current - 1)
+      setCurrent(current - 1);
     }
   }
 
   function next() {
     // Если мы на последнем слайде, переходим на первый
     if (current === books.length - 1) {
-      setCurrent(0)
+      setCurrent(0);
     } else {
-      setCurrent(current + 1)
+      setCurrent(current + 1);
     }
   }
 
-  const book = books[current]
+  const book = books[current];
 
   return (
     <div>
@@ -86,8 +87,8 @@ function App() {
 
         <div className="controls">
           <button onClick={prev}>Назад</button>
-          <span className="counter">
-            {current + 1} / {books.length}
+          <span className="counter" data-testid="slide-indicator">
+            {current + 1}/{books.length}
           </span>
           <button onClick={next}>Далее</button>
         </div>
@@ -103,7 +104,7 @@ function App() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-createRoot(document.getElementById('root')).render(<App />)
+createRoot(document.getElementById('root')).render(<App />);
