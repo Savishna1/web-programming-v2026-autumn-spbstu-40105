@@ -86,7 +86,7 @@ function App() {
         <p className="caption">{book.caption}</p>
 
         <div className="controls">
-          <button onClick={prev} data-testid="slide-prev">
+          <button onClick={prev} data-testid="slide-previous">
             Назад
           </button>
           <span className="counter" data-testid="slide-indicator">
